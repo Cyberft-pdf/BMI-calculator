@@ -16,7 +16,7 @@ namespace BMI
             {
 
              //----------hlavicka zacatek-------------------
-            string text = "Vítej ve kalkulačce BMI\n\n\n\n";
+            string text = "Welcom in BMI calculator\n\n\n\n";
 
             for (int i = 0; i <= text.Length; i++)
             {
@@ -34,12 +34,12 @@ namespace BMI
 
             //----------OTAZKY zacatek-------------------
             Console.SetCursorPosition(48, 15);
-            Console.Write("Zadej hmotnost v kg: ");
+            Console.Write("Enter the weight in kg: ");
             double hmotnost = Convert.ToDouble(Console.ReadLine());
 
 
             Console.SetCursorPosition(50, 17);
-            Console.Write("Zadej výšku m: ");
+            Console.Write("Enter height in m: ");
             double vyska = Convert.ToDouble(Console.ReadLine());
             //----------OTAZKY konec-------------------
 
@@ -62,28 +62,28 @@ namespace BMI
 
                 case double bmi when bmi < 20:
                     Console.SetCursorPosition(50, 23);
-                    Console.WriteLine($"Máte podváhu ({BMI_vypocet_zaokrohleno})"); 
+                    Console.WriteLine($"You are underweight ({BMI_vypocet_zaokrohleno})"); 
                     break;
 
                 case double bmi when bmi < 25:
                     Console.SetCursorPosition(50, 23);
-                    Console.WriteLine($"Jste v normě ({BMI_vypocet_zaokrohleno})");
+                    Console.WriteLine($"You are normal ({BMI_vypocet_zaokrohleno})");
                     break;
 
                 case double bmi when bmi < 30:
-                    Console.SetCursorPosition(47, 23);
-                    Console.WriteLine($"Máte mírnou nadváhu ({BMI_vypocet_zaokrohleno})");
+                    Console.SetCursorPosition(46, 23);
+                    Console.WriteLine($"You are slightly overweight ({BMI_vypocet_zaokrohleno})");
                     break;
 
                 case double bmi when bmi < 35:
                     Console.SetCursorPosition(50, 23);
 
-                    Console.WriteLine($"Jste obézní ({BMI_vypocet_zaokrohleno})");
+                    Console.WriteLine($"You are obese ({BMI_vypocet_zaokrohleno})");
                     break;
 
                 case double bmi when bmi > 35:
                     Console.SetCursorPosition(47, 23);
-                    Console.WriteLine($"Jste morbitně obézní ({BMI_vypocet_zaokrohleno})");
+                    Console.WriteLine($"You are morbidly obese ({BMI_vypocet_zaokrohleno})");
 
 
                     break;
@@ -99,11 +99,11 @@ namespace BMI
 
 
 
-                Console.Write("\n\nChtěl by si pokračovat Y/N: ");
+                Console.Write("\n\nWould you like to continue Y/N: ");
             } while (Console.ReadLine().ToUpper() == "Y");
 
 
-            Console.WriteLine("Děkuji za využití mé kalkulačky");
+            Console.WriteLine("Thanks for using my calculator");
             //on github cyberft-pdf
             Console.ReadKey();
 
